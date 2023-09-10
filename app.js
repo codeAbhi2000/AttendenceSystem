@@ -9,8 +9,9 @@ submitAtendenceBtn.addEventListener('click',submitAtendence)
 
 async function searchAttendence(e) {
     e.preventDefault()
+  
     const date = document.getElementById('inlineFormInputGroupUsername').value
-    console.log(date);
+    // console.log(date);
     await axios.get(`http://localhost:5000/teacher/attendenceBydate/${date}`)
     .then((res)=>{
         // console.log(res.data.data);
